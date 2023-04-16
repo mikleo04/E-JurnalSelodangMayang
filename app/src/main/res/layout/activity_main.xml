@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/iv_login"
+        android:layout_width="174dp"
+        android:layout_height="152dp"
+        android:src="@drawable/login_image"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Wlcome to E-Jurnal"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:fontFamily="@font/poppins_bold"/>
+    
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="10dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="38dp"
+        android:layout_marginEnd="38dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:weightSum="2"
+                android:background="@drawable/switch_tumbs"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp">
+
+                <TextView
+                    android:id="@+id/tv_swlogin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Log in"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:background="@drawable/switch_trcks"
+                    />
+                <TextView
+                    android:id="@+id/tv_swregister"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Register"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:textColor="@color/blue_color"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="25dp"
+                android:background="@color/white">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:hint="Email"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    app:shapeAppearanceOverlay="@style/Button4"
+                    app:boxStrokeColor="#C6B3B3"
+                    app:boxStrokeWidth="1dp"
+                    app:hintTextColor="#C6B3B3"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_emaillogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:ems="10"
+                        android:textSize="13sp"
+                        android:textColor="@color/black"
+                        android:textStyle="normal" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:hint="Password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    app:shapeAppearanceOverlay="@style/Button4"
+                    app:boxStrokeColor="#C6B3B3"
+                    app:boxStrokeWidth="1dp"
+                    app:endIconMode="password_toggle"
+                    app:hintTextColor="#C6B3B3"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_passwordllogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:ems="10"
+                        android:textSize="13sp"
+                        android:textColor="@color/black"
+                        android:textStyle="normal" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Forgot password?"
+                    android:textAlignment="textEnd"
+                    android:textColor="#C6B3B3"
+                    android:textSize="11sp"
+                    android:textStyle="normal" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="25dp"
+                android:background="@color/white">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:hint="Nama Lengkap"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    app:shapeAppearanceOverlay="@style/Button4"
+                    app:boxStrokeColor="#C6B3B3"
+                    app:boxStrokeWidth="1dp"
+                    app:hintTextColor="#C6B3B3"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_nameregister"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:ems="10"
+                        android:textSize="13sp"
+                        android:textColor="@color/black"
+                        android:textStyle="normal" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:hint="Username"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    app:shapeAppearanceOverlay="@style/Button4"
+                    app:boxStrokeColor="#C6B3B3"
+                    app:boxStrokeWidth="1dp"
+                    app:hintTextColor="#C6B3B3"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_usernameregister"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:ems="10"
+                        android:textSize="13sp"
+                        android:textColor="@color/black"
+                        android:textStyle="normal" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:hint="Email"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    app:shapeAppearanceOverlay="@style/Button4"
+                    app:boxStrokeColor="#C6B3B3"
+                    app:boxStrokeWidth="1dp"
+                    app:hintTextColor="#C6B3B3"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_emailregister"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:ems="10"
+                        android:textSize="13sp"
+                        android:textColor="@color/black"
+                        android:textStyle="normal" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:hint="Contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    app:shapeAppearanceOverlay="@style/Button4"
+                    app:boxStrokeColor="#C6B3B3"
+                    app:boxStrokeWidth="1dp"
+                    app:hintTextColor="#C6B3B3"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_contactregister"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone|number"
+                        android:ems="10"
+                        android:textSize="13sp"
+                        android:textColor="@color/black"
+                        android:textStyle="normal" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:hint="Password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    app:shapeAppearanceOverlay="@style/Button4"
+                    app:boxStrokeColor="#C6B3B3"
+                    app:boxStrokeWidth="1dp"
+                    app:endIconMode="password_toggle"
+                    app:hintTextColor="#C6B3B3"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_passwordregister"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:ems="10"
+                        android:textSize="13sp"
+                        android:textColor="@color/black"
+                        android:textStyle="normal" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp">
+                    <CheckBox
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="3dp"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dengan mendaftar anda  menyetujui syarat dan ketentuan E-jurnal"
+                        android:textSize="11dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:backgroundTint="@color/blue_color"
+                android:elevation="15dp"
+                android:gravity="center"
+                android:text="Login"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                app:shapeAppearanceOverlay="@style/Button5" />
+            <Button
+                android:id="@+id/btn_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:backgroundTint="@color/blue_color"
+                android:elevation="15dp"
+                android:gravity="center"
+                android:text="Register"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:visibility="gone"
+                app:shapeAppearanceOverlay="@style/Button5" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="or"
+                android:textStyle="normal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textColor="#C6B3B3"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_googleaccount"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:textSize="17sp"
+                android:textAllCaps="false"
+                android:elevation="15dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="24dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginEnd="24dp"
+                android:text="Google account"
+                app:icon="@drawable/icon_google"
+                app:iconSize="25dp"
+                app:iconTintMode="multiply"
+                app:shapeAppearanceOverlay="@style/Button5"
+                android:backgroundTint="@color/gray"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

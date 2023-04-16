@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "691662211911",
+    "project_id": "e-jurnal-selodang-mayang",
+    "storage_bucket": "e-jurnal-selodang-mayang.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:691662211911:android:6c7422364f461d90551a62",
+        "android_client_info": {
+          "package_name": "com.example.e_jurnalselodangmayang"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "691662211911-hgf9vt88gkk2um5f7daue500l82fjav8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB--6CYb5lPj6PCFK6l9cKQEcpuUJskj0c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "691662211911-hgf9vt88gkk2um5f7daue500l82fjav8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
